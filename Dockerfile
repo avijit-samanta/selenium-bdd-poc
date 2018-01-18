@@ -1,4 +1,4 @@
-FROM avijitsamanta/selenium-bdd-poc:stable
+FROM avijitsamanta/selenium-bdd-poc
 VOLUME /tmp
 
 RUN git clone https://github.com/avijit-samanta/selenium-bdd-poc.git
