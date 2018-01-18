@@ -1,6 +1,10 @@
-FROM avijitsamanta/selenium-bdd-poc
-VOLUME /tmp
+FROM ubuntu:latest
+MAINTAINER Andrew Odewahn "odewahn@oreilly.com"
 
-RUN git clone https://github.com/avijit-samanta/selenium-bdd-poc.git
-WORKDIR selenium-bdd-poc
-RUN mvn install
+RUN apt-get update
+RUN apt-get install -y python python-pip wget
+RUN pip install Flask
+
+ADD hello.py /home/hello.py
+
+WORKDIR /home
