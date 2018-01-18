@@ -23,7 +23,7 @@ Feature: Login into Application
   In order to collaborate with my colleagues
 
   Background: User navigates to Company home page
-    Given I am on the "Company home" page on URL "www.mycomany.com"
+    Given I am on the "Company home" page on URL "http://the-internet.herokuapp.com/login"
     Then I should see "Log In as Employee" message
 
   Scenario: Successful login
