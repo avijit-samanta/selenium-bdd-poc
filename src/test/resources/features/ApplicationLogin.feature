@@ -42,4 +42,3 @@ Feature: Login into Application
     Examples:
       | username    | password   | warning                           |
       | Test        | !23        | Incorrect credentials. Try again! |
-      | Tset        | 123        | Incorrect credentials. Try again! |

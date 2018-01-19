@@ -3,15 +3,20 @@ package com.cts.step.definitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
+
+import com.cts.coe.pages.ApplicationLoginPage;
+
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.But;
 
-public class GlobalStepDefinitions {
+public class GlobalStepDefinitions extends ApplicationLoginPage{
 	@Given("^I am on the \"([^\"]*)\" page on URL \"([^\"]*)\"$")
-	public void i_am_on_the_page_on_URL(String arg1, String arg2) throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
+	public void loginApplication(String company, String site) throws Throwable {
+		System.out.println(company + " : " + site);
+		launchApplication();
+		loginApplication();
+		closeApplication();
 	}
 
 	@When("^I fill in \"([^\"]*)\" with \"([^\"]*)\"$")

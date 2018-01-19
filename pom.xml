@@ -36,18 +36,29 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.9.8</version>
-            <scope>test</scope>
-        </dependency>
+     <dependency>	
+           <groupId>org.testng</groupId>								
+           <artifactId>testng</artifactId>								
+           <version>6.8</version>								
+           <scope>test</scope>							  			
+      </dependency>
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
             <version>3.8.0</version>
         </dependency>
-    </dependencies>
+		<!-- These are the selenium-webdriver dependencies -->	
+    <dependency>				
+           <groupId>org.seleniumhq.selenium</groupId>								
+           <artifactId>selenium-java</artifactId>								
+           <version>2.53.1</version>								
+	</dependency>
+	<dependency>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-remote-driver</artifactId>
+	    <version>3.0.0</version>
+	</dependency>		
+    </dependencies>    
     <build>
         <plugins>
             <plugin>
