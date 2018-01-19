@@ -16,7 +16,7 @@ public class GlobalStepDefinitions extends ApplicationLoginPage{
 		System.out.println(company + " : " + site);
 		launchApplication();
 		loginApplication();
-		closeApplication();
+		closeApplication(); 
 	}
 
 	@When("^I fill in \"([^\"]*)\" with \"([^\"]*)\"$")
