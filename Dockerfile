@@ -9,7 +9,7 @@ RUN apt-get install unzip
 
 #  Install Google Chrome for Debian/Ubuntu
 # RUN apt-get install libxss1 libappindicator1 libindicator7
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb ~/Downloads
+RUN wget http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip ~/Downloads
 RUN unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
 RUN chmod +x ~/Downloads/chromedriver
 RUN mv -f ~/Downloads/chromedriver /usr/local/share/chromedriver
