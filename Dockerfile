@@ -16,9 +16,8 @@ RUN apt-get -y update
 RUN apt-get -y install google-chrome-stable
 
 #  Install Chrome driver for Debian/Ubuntu
-CHROME_DRIVER_VERSION=`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`
 # RUN apt-get install libxss1 libappindicator1 libindicator7
-RUN wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip ~/Downloads
+RUN wget http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip ~/Downloads
 RUN unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
 RUN chmod +x ~/Downloads/chromedriver
 RUN mv -f ~/Downloads/chromedriver /usr/local/share/chromedriver
