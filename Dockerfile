@@ -6,7 +6,8 @@ RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y git
 RUN apt-get install -y maven
 RUN apt-get install -y xvfb
-RUN apt-get install -y ibxi6 libgconf-2-4
+RUN apt-get install -y ibxi6
+RUN apt-get install -y libgconf-2-4
 RUN apt-get install unzip
 
 # Install Chrome.
