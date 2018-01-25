@@ -8,7 +8,8 @@ import org.testng.Assert;
 
 public class BasicFunctions {
 	public String baseUrl = "http://the-internet.herokuapp.com/login";
-	String driverPath = "C:\\BrowserDriver\\chromedriver.exe";
+	String driverPath = "/usr/local/share/chromedriver"; 		// <- For Ubuntu 
+	//String driverPath = "C:\\BrowserDriver\\chromedriver.exe";	// <- For Windows 
 	public WebDriver driver;
 
 	public void launchApplication() {
