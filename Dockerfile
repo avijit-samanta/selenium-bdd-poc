@@ -1,3 +1,4 @@
 FROM docker
-RUN ls -l
-CMD echo Automation
+CMD echo Selenium Automation
+RUN mvn install
+
