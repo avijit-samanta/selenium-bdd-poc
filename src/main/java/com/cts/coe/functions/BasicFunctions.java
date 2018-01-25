@@ -1,10 +1,9 @@
 package com.cts.coe.functions;
 
 import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 
 public class BasicFunctions {
