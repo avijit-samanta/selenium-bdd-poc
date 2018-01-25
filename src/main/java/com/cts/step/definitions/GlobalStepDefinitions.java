@@ -1,14 +1,8 @@
 package com.cts.step.definitions;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
-import cucumber.api.java.en.Then;
-
+import cucumber.api.java.en.*;
 import com.cts.coe.pages.ApplicationLoginPage;
-
 import cucumber.api.PendingException;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.But;
 
 public class GlobalStepDefinitions extends ApplicationLoginPage{
 	@Given("^I am on the \"([^\"]*)\" page on URL \"([^\"]*)\"$")
