@@ -7,7 +7,8 @@ RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y git
 RUN apt-get install -y maven
 RUN apt-get install -y xvfb
-RUN apt-get install -y libxi6 libgconf-2-4
+RUN apt-get install -y libxi6
+RUN apt-get install -y libgconf-2-4
 RUN apt-get install wget
 RUN apt-get install unzip
 # RUN apt-get install libxss1 libappindicator1 libindicator7
