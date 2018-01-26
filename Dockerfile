@@ -14,7 +14,7 @@ RUN apt-get install unzip
 # RUN apt-get install libxss1 libappindicator1 libindicator7
 
 #  Install Chrome driver for Ubuntu
-RUN -N wget http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip ~/Downloads
+RUN wget -N http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip ~/Downloads
 RUN unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
 RUN chmod +x ~/Downloads/chromedriver
 RUN mv -f ~/Downloads/chromedriver /usr/local/share/chromedriver
