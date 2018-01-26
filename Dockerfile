@@ -7,13 +7,13 @@ RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y git
 RUN apt-get install -y maven
 RUN apt-get install -y xvfb
-RUN apt-get install -y libxi6
-RUN apt-get install -y libgconf-2-4
+RUN apt-get install -y libxi6 libgconf-2-4
+RUN apt-get install wget
 RUN apt-get install unzip
 # RUN apt-get install libxss1 libappindicator1 libindicator7
 
 #  Install Chrome driver for Ubuntu
-RUN wget http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip ~/Downloads
+RUN -N wget http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip ~/Downloads
 RUN unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
 RUN chmod +x ~/Downloads/chromedriver
 RUN mv -f ~/Downloads/chromedriver /usr/local/share/chromedriver
