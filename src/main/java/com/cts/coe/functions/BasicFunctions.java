@@ -16,13 +16,20 @@ public class BasicFunctions {
 	public WebDriver driver;
 
 	public void launchApplication() {
-		System.setProperty("webdriver.chrome.driver", driverPath);		
+		System.setProperty("webdriver.chrome.driver", driverPath);
 		
 		ChromeDriverManager.getInstance().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--disable-gpu");
-        driver =  new ChromeDriver(options);		
-		//driver = new ChromeDriver();
+        
+        options.addArguments("--headless", "--disable-gpu","window-size=1920,1080","--no-sandbox");
+        driver =  new ChromeDriver(options);
+        
+
+		/*DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		String[] options = new String[] { "--start-maximized", "--headless" };
+		capabilities.setCapability("chrome.switches", options);
+		driver = new RemoteWebDriver(service.getUrl(), capabilities);*/
+		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);		
 		driver.get(baseUrl);
 		String expectedTitle = "The Internet";
