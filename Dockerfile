@@ -16,7 +16,7 @@ RUN apt-get install curl
 
 #  Install Chrome driver for Ubuntu
 RUN wget -N http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip
-RUN unzip chromedriver_linux64.zip -d /usr/local/share/chromedriver
+RUN unzip chromedriver_linux64.zip -d /usr/local/share
 RUN rm chromedriver_linux64.zip
 RUN chmod +x /usr/local/share/chromedriver
 RUN ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
