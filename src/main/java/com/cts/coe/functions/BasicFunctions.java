@@ -14,7 +14,13 @@ public class BasicFunctions {
 
 	public void launchApplication() {
 		System.setProperty("webdriver.chrome.driver", driverPath);		
-		driver = new ChromeDriver();
+		
+		ChromeDriverManager.getInstance().setup();
+        	ChromeOptions options = new ChromeOptions();
+        	options.addArguments("--headless", "--disable-gpu");
+        	driver =  new ChromeDriver(options);
+		
+		//driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);		
 		driver.get(baseUrl);
 		String expectedTitle = "The Internet";
