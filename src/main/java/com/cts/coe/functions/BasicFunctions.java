@@ -19,10 +19,9 @@ public class BasicFunctions {
 		System.setProperty("webdriver.chrome.driver", driverPath);		
 		
 		ChromeDriverManager.getInstance().setup();
-        	ChromeOptions options = new ChromeOptions();
-        	options.addArguments("--headless", "--disable-gpu");
-        	driver =  new ChromeDriver(options);
-		
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless", "--disable-gpu");
+        driver =  new ChromeDriver(options);		
 		//driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);		
 		driver.get(baseUrl);
