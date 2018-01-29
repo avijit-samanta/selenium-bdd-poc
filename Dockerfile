@@ -11,6 +11,7 @@ RUN apt-get install -y libxi6
 RUN apt-get install -y libgconf-2-4
 RUN apt-get install wget
 RUN apt-get install unzip
+RUN apt-get install curl
 # RUN apt-get install libxss1 libappindicator1 libindicator7
 
 #  Install Chrome driver for Ubuntu
