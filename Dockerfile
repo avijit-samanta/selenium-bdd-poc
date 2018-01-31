@@ -1,36 +1,15 @@
 FROM ubuntu
 MAINTAINER Avijit Samanta
 
-#Upgrade pip, install Git & VNC 	
-RUN pip install --upgrade pip \
-        && apt-get update \
-	      && apt-get install -y git x11vnc 
- 
-# Add entrypoint.sh and other available files to image
-ADD . /usr/qxf2_pom
- 
-#Change directory and clone Qxf2 Public POM repo
-RUN cd /usr/qxf2_pom \
-	&& git clone https://github.com/qxf2/qxf2-page-object-model.git 
- 
-#Set envirnmental variable for display	
-ENV DISPLAY :20
- 
-#Set working directory
-WORKDIR /usr/qxf2_pom/qxf2-page-object-model
- 
-#Install requirements using requirements.txt 
-RUN pip install -r requirements.txt 
- 
-#Provide read, write and execute permissions for entrypoint.sh and also take care of '\r' error which raised when someone uses notepad or note++ for editing in Windows.
-RUN chmod 755 /usr/qxf2_pom/entrypoint.sh \
-	&& sed -i 's/\r$//' /usr/qxf2_pom/entrypoint.sh
- 
-#Expose port 5920 to view display using VNC Viewer
-EXPOSE 5920
- 
-#Execute entrypoint.sh at start of container
-ENTRYPOINT ["/usr/qxf2_pom/entrypoint.sh"]
+# Update and install s/w
+RUN apt-get update
+#RUN apt-get install -y openjdk-8-jdk
+#RUN apt-get install -y git maven
+#RUN apt-get install -y xvfb libxi6 libgconf-2-4
+#RUN apt-get install wget unzip curl
+
+RUN apt-get install --no-install-recommends ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+RUN apt-get install vnc4server
 
 
 # Update and install s/w
