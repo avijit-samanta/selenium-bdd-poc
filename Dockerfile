@@ -8,7 +8,6 @@ RUN apt-get install -y git maven
 RUN apt-get install -y xvfb libxi6 libgconf-2-4
 RUN apt-get install wget unzip curl
 
-
 # Install Chrome driver for Ubuntu
 RUN wget -N http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip
 RUN unzip chromedriver_linux64.zip -d /usr/local/share
